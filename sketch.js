@@ -22,6 +22,7 @@ function setup() {  // this function runs only once while running
     specs = loadImage('images/spects.png');
     smoke = loadImage('images/cigar.png');
     ball = loadImage('images/pelota.png');
+    irritedeyes = loadImage('images/irritedeye.png');
 }
 
 function recievedPoses(poses) {
@@ -50,11 +51,11 @@ function draw() { // this function code runs in infinite loop
     
     if(singlePose) {
         for(let i=0; i<singlePose.keypoints.length; i++) {
-            ellipse(singlePose.keypoints[i].position.x, singlePose.keypoints[i].position.y, 20);
+            ellipse(singlePose.keypoints[i].position.x, singlePose.keypoints[i].position.y, 15);
         }
 
         stroke(255, 255, 255);
-        strokeWeight(5);
+        strokeWeight(0);
 
         for(let j=0; j<skeleton.length; j++) {
             line(skeleton[j][0].position.x, skeleton[j][0].position.y, skeleton[j][1].position.x, skeleton[j][1].position.y);
@@ -63,6 +64,8 @@ function draw() { // this function code runs in infinite loop
         // Apply specs and cigar
         image(specs, singlePose.nose.x-40, singlePose.nose.y-70, 125, 125);
         image(smoke, singlePose.nose.x-35, singlePose.nose.y+28, 50, 50);
+        image(irritedeyes, singlePose.reye.x+10, singlePose.reye.y+10, 50,50);
+        image(irritedeyes, singlePose.leye.x+30, singlePose.leye.y+30, 50,50);
     }
     
     //background(200);
