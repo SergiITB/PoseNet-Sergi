@@ -24,6 +24,7 @@ function setup() {  // this function runs only once while running
     ball = loadImage('images/pelota.png');
     irritedeyes = loadImage('images/irritedeye.png');
     blackhole = loadImage('images/blackhole1.png');
+    nariz = loadImage('images/nariz.png');
 }
 
 function recievedPoses(poses) {
@@ -71,6 +72,7 @@ function draw() { // this function code runs in infinite loop
         // Apply specs and cigar
         //image(specs, singlePose.nose.x-40, singlePose.nose.y-70, 125, 125);
         //image(smoke, singlePose.nose.x-35, singlePose.nose.y+28, 50, 50);
+        image(nariz, singlePose.nose.x-10, singlePose.nose.y-10, 25, 25);
         image(irritedeyes, singlePose.leftEye.x-10, singlePose.leftEye.y-10, 25,25);
         image(irritedeyes, singlePose.rightEye.x-10, singlePose.rightEye.y-10, 25,25);
     }
