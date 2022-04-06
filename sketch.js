@@ -52,7 +52,7 @@ function draw() { // this function code runs in infinite loop
     
     if(singlePose) {
         for(let i=0; i<singlePose.keypoints.length; i++) {
-            image(blackhole,singlePose.keypoints[i].position.x, singlePose.keypoints[i].position.y, 30);
+            image(blackhole,singlePose.keypoints[i].position.x, singlePose.keypoints[i].position.y, 15,15);
         }
 
         stroke(255, 255, 255);
@@ -66,7 +66,7 @@ function draw() { // this function code runs in infinite loop
         //image(specs, singlePose.nose.x-40, singlePose.nose.y-70, 125, 125);
         image(smoke, singlePose.nose.x-35, singlePose.nose.y+28, 50, 50);
         image(irritedeyes, singlePose.nose.x-30, singlePose.nose.y-30, 25,25);
-        image(irritedeyes, singlePose.nose.x+30, singlePose.nose.y-70, 25,25);
+        image(irritedeyes, singlePose.nose.x+20, singlePose.nose.y-40, 25,25);
     }
     
     //background(200);
