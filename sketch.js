@@ -23,6 +23,7 @@ function setup() {  // this function runs only once while running
     smoke = loadImage('images/cigar.png');
     ball = loadImage('images/pelota.png');
     irritedeyes = loadImage('images/irritedeye.png');
+    blackhole = loadImage('images/blackhole.png');
 }
 
 function recievedPoses(poses) {
@@ -51,7 +52,7 @@ function draw() { // this function code runs in infinite loop
     
     if(singlePose) {
         for(let i=0; i<singlePose.keypoints.length; i++) {
-            ellipse(singlePose.keypoints[i].position.x, singlePose.keypoints[i].position.y, 15);
+            image(blackhole,singlePose.keypoints[i].position.x, singlePose.keypoints[i].position.y, 15);
         }
 
         stroke(255, 255, 255);
