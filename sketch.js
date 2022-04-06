@@ -52,7 +52,7 @@ function draw() { // this function code runs in infinite loop
     
     if(singlePose) {
         for(let i=0; i<singlePose.keypoints.length; i++) {
-            ellipse(singlePose.keypoints[i].position.x, singlePose.keypoints[i].position.y, 20);
+            ellipse(singlePose.keypoints[i].position.x, singlePose.keypoints[i].position.y, 15);
         }
 
         stroke(255, 0, 0);
