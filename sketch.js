@@ -56,7 +56,7 @@ function draw() { // this function code runs in infinite loop
         }
 
         stroke(255, 255, 255);
-        strokeWeight(0);
+        strokeWeight(4);
 
         for(let j=0; j<skeleton.length; j++) {
             line(skeleton[j][0].position.x, skeleton[j][0].position.y, skeleton[j][1].position.x, skeleton[j][1].position.y);
