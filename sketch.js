@@ -52,7 +52,7 @@ function draw() { // this function code runs in infinite loop
     
     if(singlePose) {
         for(let i=0; i<singlePose.keypoints.length; i++) {
-            image(blackhole,singlePose.keypoints[i].position.x, singlePose.keypoints[i].position.y, 25,25);
+            ellipse(singlePose.keypoints[i].position.x, singlePose.keypoints[i].position.y, 20);
         }
 
         stroke(255, 255, 255);
