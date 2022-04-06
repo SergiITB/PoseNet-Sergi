@@ -39,11 +39,11 @@ function modelLOADED() {
     console.log("model has loaded");
 }
 
-/*
-function getRandomArbitrary(min, max) { // generate random num
+
+function getRandomArbitrary(min, max) {
     return Math.random() * (max - min) + min;
 }
-*/
+
 function draw() { // this function code runs in infinite loop
     
     // images and video(webcam)
@@ -52,11 +52,11 @@ function draw() { // this function code runs in infinite loop
     
     if(singlePose) {
         for(let i=0; i<singlePose.keypoints.length; i++) {
-            image(blackhole,singlePose.keypoints[i].position.x, singlePose.keypoints[i].position.y, 15);
+            image(blackhole,singlePose.keypoints[i].position.x, singlePose.keypoints[i].position.y, 30);
         }
 
         stroke(255, 255, 255);
-        strokeWeight(4);
+        strokeWeight(3);
 
         for(let j=0; j<skeleton.length; j++) {
             line(skeleton[j][0].position.x, skeleton[j][0].position.y, skeleton[j][1].position.x, skeleton[j][1].position.y);
