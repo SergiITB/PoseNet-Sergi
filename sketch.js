@@ -55,7 +55,7 @@ function draw() { // this function code runs in infinite loop
             ellipse(singlePose.keypoints[i].position.x, singlePose.keypoints[i].position.y, 20);
         }
 
-        stroke(255, 255, 255);
+        stroke(255, 0, 0);
         strokeWeight(3);
 
         for(let j=0; j<skeleton.length; j++) {
@@ -65,8 +65,8 @@ function draw() { // this function code runs in infinite loop
         // Apply specs and cigar
         //image(specs, singlePose.nose.x-40, singlePose.nose.y-70, 125, 125);
         //image(smoke, singlePose.nose.x-35, singlePose.nose.y+28, 50, 50);
-        image(irritedeyes, singlePose.leftEye.x-0, singlePose.leftEye.y+0, 25,25);
-        image(irritedeyes, singlePose.rightEye.x-0, singlePose.rightEye.y+0, 25,25);
+        image(irritedeyes, singlePose.leftEye.x-10, singlePose.leftEye.y+10, 25,25);
+        image(irritedeyes, singlePose.rightEye.x-10, singlePose.rightEye.y+10, 25,25);
     }
     
     //background(200);
