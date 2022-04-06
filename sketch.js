@@ -65,8 +65,8 @@ function draw() { // this function code runs in infinite loop
         // Apply specs and cigar
         //image(specs, singlePose.nose.x-40, singlePose.nose.y-70, 125, 125);
         //image(smoke, singlePose.nose.x-35, singlePose.nose.y+28, 50, 50);
-        image(irritedeyes, singlePose.leftEye.x-35, singlePose.leftEye.y-30, 25,25);
-        image(irritedeyes, singlePose.nose.x+10, singlePose.nose.y-30, 25,25);
+        image(irritedeyes, singlePose.leftEye.x+0, singlePose.leftEye.y+0, 25,25);
+        image(irritedeyes, singlePose.rightEye.x+0, singlePose.rightEye.y+0, 25,25);
     }
     
     //background(200);
