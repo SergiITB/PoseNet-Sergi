@@ -19,9 +19,6 @@ function setup() {  // this function runs only once while running
     posenet.on('pose', recievedPoses);
 
     actor_img = loadImage('images/shahrukh.png');
-    specs = loadImage('images/spects.png');
-    smoke = loadImage('images/cigar.png');
-    ball = loadImage('images/pelota.png');
     irritedeyes = loadImage('images/irritedeye.png');
     blackhole = loadImage('images/blackhole1.png');
     nariz = loadImage('images/nariz.png');
@@ -47,9 +44,7 @@ function getRandomArbitrary(min, max) {
 
 function draw() { // this function code runs in infinite loop
     
-    // images and video(webcam)
     image(capture, 0, 0);
-    //fill(255, 0, 0);
 
     r = getRandomArbitrary(0, 255);
     g = getRandomArbitrary(0, 255);
@@ -68,51 +63,8 @@ function draw() { // this function code runs in infinite loop
             line(skeleton[j][0].position.x, skeleton[j][0].position.y, skeleton[j][1].position.x, skeleton[j][1].position.y);
         }
 
-
-        //WEB COM NOMBRES DE CADA PUNTO:
-        //https://blog.paperspace.com/posenet-keypoint-detection-android-app/
-
-
-
-        // Apply specs and cigar
-        //image(specs, singlePose.nose.x-40, singlePose.nose.y-70, 125, 125);
-        //image(smoke, singlePose.nose.x-35, singlePose.nose.y+28, 50, 50);
         image(nariz, singlePose.nose.x-10, singlePose.nose.y-10, 25, 25);
         image(irritedeyes, singlePose.leftEye.x-10, singlePose.leftEye.y-10, 25,25);
         image(irritedeyes, singlePose.rightEye.x-10, singlePose.rightEye.y-10, 25,25);
     }
-    
-    //background(200);
-    //1.point
-    //point(200, 200);
-    //2.line
-    //line(200, 200, 300, 300);
-    //3.trialgle
-    //triangle(100, 200, 300, 400, 150, 250);
-    //4.rectangle
-    //rect(250, 200, 200, 100);
-    //5. circle
-    //ellipse(100, 200, 100, 100);
-    // color circlw using stroke and crcle
-    /*
-    fill(127, 102, 34);
-    stroke(255, 0, 0);
-    ellipse(100, 200, 100, 100);
-    stroke(0, 255, 0);
-    ellipse(300, 320, 100, 100);
-    stroke(0, 0, 255);
-    ellipse(400, 400, 100, 100);
-    */
-
-    // infite loop using mouse hovering
-    //fill(255);
-    /*
-    r = getRandomArbitrary(0, 255);
-    g = getRandomArbitrary(0, 255);
-    b = getRandomArbitrary(0, 255);
-    fill(r,g,b);
-    ellipse(mouseX, mouseY, 50, 50);
-    */
-   // IMAGE CAPTURE
-   //image(capture, 0, 0, 800, 600);
 }
