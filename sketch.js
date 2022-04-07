@@ -61,7 +61,7 @@ function draw() { // this function code runs in infinite loop
             image(blackhole,singlePose.keypoints[i].position.x-10, singlePose.keypoints[i].position.y-10, 20,20);
         }
 
-        stroke(255, 0, 0);
+        stroke(r, g, b);
         strokeWeight(3);
 
         for(let j=0; j<skeleton.length; j++) {
