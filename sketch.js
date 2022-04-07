@@ -49,7 +49,12 @@ function draw() { // this function code runs in infinite loop
     
     // images and video(webcam)
     image(capture, 0, 0);
-    fill(255, 0, 0);
+    //fill(255, 0, 0);
+
+    r = getRandomArbitrary(0, 255);
+    g = getRandomArbitrary(0, 255);
+    b = getRandomArbitrary(0, 255);
+    fill(r,g,b);
     
     if(singlePose) {
         for(let i=0; i<singlePose.keypoints.length; i++) {
